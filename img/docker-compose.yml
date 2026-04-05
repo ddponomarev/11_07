@@ -1,0 +1,68 @@
+services:
+  # ВЕРТИКАЛЬНЫЙ ШАРДИНГ
+
+  # Сервер  "пользователи"
+  user_db:
+    image: postgres:17
+    container_name: user_db
+    ports:
+      - "5440:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: user_data
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - shard_net
+
+  # Сервер  "магазины"
+  store_db:
+    image: postgres:17
+    container_name: store_db
+    ports:
+      - "5441:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: store_data
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - shard_net
+
+  # ГОРИЗОНТАЛЬНЫЙ ШАРДИНГ
+
+  # Шард 1: книги ID 1-1000
+  book_shard1:
+    image: postgres:17
+    container_name: book_shard1
+    ports:
+      - "5442:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: book_data
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - shard_net
+
+  # Шард 2: книги ID 1001-2000
+  book_shard2:
+    image: postgres:17
+    container_name: book_shard2
+    ports:
+      - "5443:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: book_data
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - shard_net
+
+networks:
+  shard_net:
+    driver: bridge
