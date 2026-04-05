@@ -87,7 +87,7 @@
 *Пришлите конфиг Docker и SQL скрипт с командами для базы данных*.
 
 - [docker-compose.yml](https://github.com/ddponomarev/11_07/blob/main/img/docker-compose.yml)
-- [init.sql](https://github.com/ddponomarev/11_06/blob/main/img/init.sql)
+- [init.sql](https://github.com/ddponomarev/11_07/blob/main/img/init.sql)
 
 ![Рисунок 3.](https://github.com/ddponomarev/11_07/blob/main/img/z3.png)
 
