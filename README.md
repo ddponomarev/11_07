@@ -63,7 +63,7 @@
 Режим работы: Master-Slave (мастер пишет, слейв читает).
 
 ```
-![Рисунок 1. Блок-схема горизонтального шардинга](https://github.com/ddponomarev/11_07/blob/master/img/z1.png)
+![Рисунок 1.](https://github.com/ddponomarev/11_07/blob/main/img/z1.png)
 
 ```
 3. Вертикальный шардинг
@@ -73,7 +73,7 @@
 
 База данных store_data для таблицы «магазины» хранит данные о магазинах, запасах, скидках. Режим работы: Master-Slave.
 ```
-![Рисунок 2. Блок-схема вертикального шардинга](https://github.com/ddponomarev/11_07/blob/master/img/z2.png)
+![Рисунок 2.](https://github.com/ddponomarev/11_07/blob/main/img/z2.png)
 
 ```
 Вывод
