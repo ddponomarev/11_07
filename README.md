@@ -11,11 +11,7 @@
 *Дайте ответ в свободной форме.*
 
 ```
-Master-Slave:
-Есть один главный сервер (Master), который обрабатывает все операции записи. Ведомые серверы (Slaves) только читают данные с Master. Если Master выходит из строя, запись данных становится невозможной.
 
-Master-Master:
-Все серверы являются главными. Любой сервер может принимать как запись, так и чтение. Данные синхронизируются между всеми узлами. Отказ одного сервера не останавливает запись (работают другие).
 ```
 
 ### Задание 2
@@ -30,16 +26,12 @@ Master-Master:
 
 *Пришлите блоксхему, где и что будет располагаться. Опишите, в каких режимах будут работать сервера.*
 
-![Задание2](https://github.com/ddponomarev/11_06/blob/master/img/z2.png)
-![Задание2](https://github.com/ddponomarev/11_06/blob/master/img/z3.png)
-![Задание2](https://github.com/ddponomarev/11_06/blob/master/img/z4.png)
+![Задание2](https://github.com/ddponomarev/11_07/blob/master/img/z2.png)
+![Задание2](https://github.com/ddponomarev/11_07/blob/master/img/z3.png)
+![Задание2](https://github.com/ddponomarev/11_07/blob/master/img/z4.png)
 
 ```
-Master-Slave:
-Есть один главный сервер (Master), который обрабатывает все операции записи. Ведомые серверы (Slaves) только читают данные с Master. Если Master выходит из строя, запись данных становится невозможной.
 
-Master-Master:
-Все серверы являются главными. Любой сервер может принимать как запись, так и чтение. Данные синхронизируются между всеми узлами. Отказ одного сервера не останавливает запись (работают другие).
 ```
 
 ### Задание 3*
@@ -48,9 +40,9 @@ Master-Master:
 
 *Пришлите конфиг Docker и SQL скрипт с командами для базы данных*.
 
-- [docker-compose.yml](https://github.com/ddponomarev/11_06/blob/master/img/docker-compose.yml)
-- [master_init.sh](https://github.com/ddponomarev/11_06/blob/master/img/master_init.sh)
-- [slave_init.sh](https://github.com/ddponomarev/11_06/blob/master/img/slave_init.sh)
+- [docker-compose.yml](https://github.com/ddponomarev/11_07/blob/master/img/docker-compose.yml)
+- [master_init.sh](https://github.com/ddponomarev/11_07/blob/master/img/master_init.sh)
+- [slave_init.sh](https://github.com/ddponomarev/11_07/blob/master/img/slave_init.sh)
 
-![Задание2](https://github.com/ddponomarev/11_06/blob/master/img/z3.png)
-![Задание2](https://github.com/ddponomarev/11_06/blob/master/img/z4.png)
+![Задание2](https://github.com/ddponomarev/11_07/blob/master/img/z3.png)
+![Задание2](https://github.com/ddponomarev/11_07/blob/master/img/z4.png)
